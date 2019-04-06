@@ -3,32 +3,41 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package javaapplication1;
+package jurnal8;
+
+import static com.sun.deploy.uitoolkit.impl.fx.ui.MixedCodeInSwing.show;
+import java.util.Scanner;
 
 /**
  *
  * @author Praktikan
  */
+public class Jurnal8 {
 
-import java.util.Scanner;
-
-public class Fibonacci {
-    public static void main(String[]args) {
-        Scanner show = new Scanner(System.in);
-        System.out.print("Masukan Jumlah Deret Fibonacci :  ");
-        int n = show.nextInt();
-        long fib[] = new long[n];
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner sc =  new Scanner(System.in);
+        System.out.print("Masukan Jumlah Deret Fibonacci : ");
+        int n = sc.nextInt();
+        long fibonacci[] = new long[n];
+        int hasil= 0;
          
-        fib[0] = 1;
-        fib[1] = 1;
+        fibonacci[0] = 1;
+        fibonacci[1] = 1;
+      
          
         for(int i = 2; i < n; i++) {
-            fib[i] = fib[i-1] + fib[i-2];
+            fibonacci[i] = fibonacci[i-1] + fibonacci[i-2];
+           
         }
          
-        for (int i = 0; i < n; i++) {
-            System.out.print(fib[i] +  " ");
+        for (int i = n; i > 0; i--) {
+            System.out.print(fibonacci[i-1] +  " ");
         }
+        
     }
- 
+    
 }
